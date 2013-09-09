@@ -88,7 +88,7 @@ class LiveJournal
     })    
     response = @server.call('LJ.XMLRPC.getevents', post_params)
     events = response['events']
-    if events and events.size > 0:
+    if events and events.size > 0
       return Time.parse(events[0]['eventtime'])
     else
       return nil
